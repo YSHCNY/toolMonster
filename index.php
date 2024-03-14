@@ -1,4 +1,6 @@
 <?php
+session_start();
+
  $page = basename($_SERVER['REQUEST_URI']); 
  // =================END======================//
 

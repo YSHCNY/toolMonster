@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include '../Model/conn.php';
 
     date_default_timezone_set('Asia/Manila');
@@ -17,7 +18,8 @@
             try {
                 $stmt = $conn->prepare("INSERT INTO main (logged, softwareName, softwareType, productKey, softwareDA, softwareED, personIC) VALUES (?, ?, ?, ?, ?, ?, ?)");
                 $stmt->execute([$currenttime, $productN, $productT, $productK, $start, $end, $productO]);
-                
+            
+                $_SESSION['success'] = true;
                 header("location: .././Software+License");
             } catch(PDOException $e) {
                 echo "Error: " . $e->getMessage();

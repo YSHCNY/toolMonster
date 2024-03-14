@@ -10,8 +10,8 @@
         $colA = $_POST['productN'];
         $colB = $_POST['productT'];
         $colC = $_POST['productK'];
-        $colD = $_POST['start'];
-        $colE = $_POST['end'];
+        $colD = date('Y-m-d', strtotime($_POST['start']));
+        $colE = date('Y-m-d', strtotime($_POST['end']));
         $colF = $_POST['productO'];
         // You can add more fields as needed
     
@@ -22,7 +22,8 @@
         // Check if the update was successful
         if ($stmt->rowCount() > 0) {
             // Update successful
-            echo json_encode(array("success" => true, "message" => "Data updated successfully."));
+            session_start();
+            $_SESSION['editsuccess'] = true;
             header("location: .././Software+License");
             exit;
         } else {

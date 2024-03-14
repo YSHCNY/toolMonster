@@ -24,12 +24,11 @@
 
 <?php include  'softwaremodal/addsoftwaremodal.php';?>
 
+
     </div>
 
 
 </div>
-
-
 
 
 
@@ -39,6 +38,10 @@
 
 <div class="relative overflow-x-auto">
 
+<?php
+
+include 'alerts/success.php'; 
+ ?>
 
     <table class="w-full text-sm text-gray-500 dark:text-gray-400" id = 'myTable'>
         <thead class="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400">

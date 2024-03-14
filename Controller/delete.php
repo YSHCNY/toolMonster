@@ -1,4 +1,5 @@
 <?php
+session_start();
     include '../model/conn.php';
 
 
@@ -28,6 +29,7 @@
         }
         
         // Redirect back to the main page
+        $_SESSION['deletesuccess'] = true;
         header("Location: .././Software+License");
         
         }
