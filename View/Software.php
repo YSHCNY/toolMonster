@@ -43,7 +43,7 @@
 include 'alerts/success.php'; 
  ?>
 
-    <table class="w-full text-sm text-gray-500 dark:text-gray-400" id = 'myTable'>
+    <table class="w-full text-sm text-dark dark:text-gray-400" id = 'myTable'>
         <thead class="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400">
             <tr>
                     <th scope="col" class="px-6 py-3">Date Logged</th>
@@ -53,6 +53,7 @@ include 'alerts/success.php';
                     <th scope="col" class="px-6 py-3">Person In Charge</th>
                     <th scope="col" class="px-6 py-3">Manufactured Date</th>
                     <th scope="col" class="px-6 py-3">Expiry Date</th>
+                    <th scope="col" span =  class="px-6 py-3"> </th>
                     <th scope="col" span =  class="px-6 py-3">Actions </th>
                 
             </tr>
@@ -72,6 +73,7 @@ include 'alerts/success.php';
 
 <?php
  include 'softwaremodal/editsoftwaremodal.php';
+ include 'softwaremodal/detailsmodal.php';
  
 ?>
 
@@ -99,6 +101,30 @@ const editButtons = document.querySelectorAll('.editButton');
         });
     });
 
+
+
+    
+    const detailButtons = document.querySelectorAll('.details');
+    detailButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const id = button.getAttribute('data-id');
+            const softwareName = button.parentElement.parentElement.querySelector('.font-semibold').innerText;
+            const softwareType = button.parentElement.parentElement.querySelector('td:nth-child(3)').innerText;
+            const productKey = button.parentElement.parentElement.querySelector('td:nth-child(4)').innerText;
+            const personIC = button.parentElement.parentElement.querySelector('td:nth-child(5)').innerText;
+            const softwareDA = button.parentElement.parentElement.querySelector('td:nth-child(6)').innerText;
+            const softwareED = button.parentElement.parentElement.querySelector('td:nth-child(7)').innerText;
+            
+            document.getElementById('Id').innerText = id;
+            document.getElementById('SoftwareName').innerText = softwareName;
+            document.getElementById('SoftwareType').innerText = softwareType;
+            document.getElementById('ProductKey').innerText = productKey;
+            document.getElementById('PersonIC').innerText = personIC;
+            document.getElementById('SoftwareDA').innerText = softwareDA;
+            document.getElementById('SoftwareED').innerText = softwareED;
+        });
+    });
+
 // function updateTable() {
 //     fetch("Model/fetch_data.php")
 //         .then(response => response.text())
@@ -114,7 +140,7 @@ const editButtons = document.querySelectorAll('.editButton');
 $(document).ready(function() {
     $('#myTable').DataTable({
         paging: true,  // Enable pagination
-        ordering: false, // Enable sorting
+        ordering: true, // Enable sorting
         lengthChange: true,
       info: true
     });

@@ -7,9 +7,9 @@
         if (isset($_POST['submitSoftware']) && $_POST['submitSoftware'] == 'submitSoftware') {
 
         $id = $_POST['id'];
-        $colA = $_POST['productN'];
+        $colA = ucwords(trim($_POST['productN']));
         $colB = $_POST['productT'];
-        $colC = $_POST['productK'];
+        $colC = strtoupper(trim($_POST['productK']));
         $colD = date('Y-m-d', strtotime($_POST['start']));
         $colE = date('Y-m-d', strtotime($_POST['end']));
         $colF = $_POST['productO'];

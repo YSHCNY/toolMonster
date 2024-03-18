@@ -8,9 +8,9 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST' ) {
         if (isset($_POST['submitSoftware']) && $_POST['submitSoftware'] == 'submitSoftware') {
 
-            $productN = trim($_POST['productN']);
+            $productN =  ucwords(trim($_POST['productN']));
             $productT = trim($_POST['productT']);
-            $productK = trim($_POST['productK']);
+            $productK = strtoupper(trim($_POST['productK']));
             $start = date('Y-m-d', strtotime($_POST['start']));
             $end = date('Y-m-d', strtotime($_POST['end']));
             $productO = trim($_POST['productO']);
