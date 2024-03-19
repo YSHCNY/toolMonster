@@ -65,7 +65,7 @@ session_start();
 <main class = "">
 
 <div class="px-4 sm:ml-64 mx-8 my-8">
-   <div class="p-3 mx-auto">
+   <div class=" ">
         <?php
             
             if ($content) {

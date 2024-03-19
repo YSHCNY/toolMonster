@@ -23,6 +23,7 @@
                 
             <p class = 'hidden'id="Id"></p>
             <div>
+                
             <p class = 'text-lg' id="SoftwareName"></p>
             </div>
             <p id="SoftwareType"></p>

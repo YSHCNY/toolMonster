@@ -19,6 +19,7 @@
 </button>
 
 
+
 </div>
 </div>
 
@@ -46,21 +47,21 @@ include 'alerts/success.php';
     <table class="w-full text-sm text-dark dark:text-gray-400" id = 'myTable'>
         <thead class="text-xs text-gray-700 uppercase bg-white dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                    <th scope="col" class="px-6 py-3">Date Logged</th>
-                    <th scope="col" class="px-6 py-3"> Product name</th>
-                    <th scope="col" class="px-6 py-3"> Product Type</th>
+                    <!-- <th scope="col" class="px-6 py-3">Date Logged</th> -->
+                    <th scope="col"  class="px-6 py-3"></th>
+                    <th scope="col" class="px-6 py-3">Product name</th>
+                    <th scope="col" class="px-6 py-3">Product Manufacturer</th>
                     <th scope="col" class="px-6 py-3">Product Key</th>
-                    <th scope="col" class="px-6 py-3">Person In Charge</th>
+                    <th scope="col" class="px-6 py-3">License to Name</th>
                     <th scope="col" class="px-6 py-3">Manufactured Date</th>
-                    <th scope="col" class="px-6 py-3">Expiry Date</th>
-                    <th scope="col" span =  class="px-6 py-3"> </th>
+                    <th scope="col"  class="px-6 py-3">Expiration Date</th>
                     <th scope="col" span =  class="px-6 py-3">Actions </th>
                 
             </tr>
         </thead >
       
         <tbody id="tableBody" >
-        <?php include './Model/fetch_data.php'; ?>
+        <?php include './Model/softwarelicense/software_fetch_data.php'; ?>
               
                 </tbody>
        
@@ -98,6 +99,7 @@ const editButtons = document.querySelectorAll('.editButton');
             document.getElementById('editPersonIC').value = personIC;
             document.getElementById('editSoftwareDA').value = softwareDA;
             document.getElementById('editSoftwareED').value = softwareED;
+            
         });
     });
 
@@ -122,6 +124,7 @@ const editButtons = document.querySelectorAll('.editButton');
             document.getElementById('PersonIC').innerText = personIC;
             document.getElementById('SoftwareDA').innerText = softwareDA;
             document.getElementById('SoftwareED').innerText = softwareED;
+            
         });
     });
 

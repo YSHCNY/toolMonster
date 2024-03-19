@@ -12,8 +12,8 @@
    
 
    <div class="h-full pl-5 py-4 overflow-y-auto  bg-gray-900 dark:bg-gray-800">
-   <a href="./" class="flex bg-transparent items-center mx-auto space-x-3 rtl:space-x-reverse">
-      <img src="IMG/Group 69.png" class="h-10" alt="">
+   <a href="./" class="flex bg-transparent items-center js  text-center mx-auto space-x-3 rtl:space-x-reverse">
+      <img src="IMG/Group 69.png" class="h-8" alt="">
 
   </a>
 
