@@ -23,6 +23,12 @@
 </div>
 </div>
 
+<div class="grid grid-cols-3">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
 <?php include  'softwaremodal/addsoftwaremodal.php';?>
 
 
